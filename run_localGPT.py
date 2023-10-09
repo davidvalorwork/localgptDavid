@@ -61,7 +61,8 @@ def load_model(device_type, model_id, model_basename=None, LOGGING=logging):
             llm = load_quantized_model_gguf_ggml(model_id, model_basename, device_type, LOGGING)
             return llm
         elif ".ggml" in model_basename.lower():
-            model, tokenizer = load_quantized_model_gguf_ggml(model_id, model_basename, device_type, LOGGING)
+            llm = load_quantized_model_gguf_ggml(model_id, model_basename, device_type, LOGGING)
+            return llm
         else:
             model, tokenizer = load_quantized_model_qptq(model_id, model_basename, device_type, LOGGING)
     else:
