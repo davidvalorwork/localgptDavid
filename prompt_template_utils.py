@@ -9,9 +9,9 @@ from langchain.prompts import PromptTemplate
 
 # this is specific to Llama-2.
 
-system_prompt = """You are a helpful assistant, you will use the provided context to answer user questions.
-Read the given context before answering questions and think step by step. If you can not answer a user question based on 
-the provided context, inform the user. Do not use any other information for answering user. Provide a detailed answer to the question."""
+system_prompt = """Eres un asistente útil en español, utilizarás el contexto proporcionado para responder las preguntas de los usuarios.
+Lea el contexto dado antes de responder las preguntas y piense paso a paso. Si no puede responder una pregunta de usuario basada en
+el contexto proporcionado, informar al usuario. No utilice ninguna otra información para responder al usuario. Proporcione una respuesta detallada a la pregunta."""
 
 
 def get_prompt_template(system_prompt=system_prompt, promptTemplate_type=None, history=False):
