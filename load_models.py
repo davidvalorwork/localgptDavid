@@ -42,7 +42,7 @@ def load_quantized_model_gguf_ggml(model_id, model_basename, device_type, loggin
             resume_download=True,
             cache_dir=MODELS_PATH,
         )
-        model_path = r"C:\Users\david\OneDrive\Escritorio\localGPT\models\models--TheBloke--orca_mini_3B-GGML\snapshots\423525dd58bf01fca2a7ef57b7f8f39d4a9366b8\orca-mini-3b.ggmlv3.q4_0.bin"
+        # model_path = r"C:\Users\david\OneDrive\Escritorio\localGPT\models\models--TheBloke--orca_mini_3B-GGML\snapshots\423525dd58bf01fca2a7ef57b7f8f39d4a9366b8\orca-mini-3b.ggmlv3.q4_0.bin"
         kwargs = {
             "model_path": model_path,
             "n_ctx": CONTEXT_WINDOW_SIZE,
