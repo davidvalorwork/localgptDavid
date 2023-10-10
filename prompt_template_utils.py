@@ -21,15 +21,15 @@ def get_prompt_template(system_prompt=system_prompt, promptTemplate_type=None, h
         SYSTEM_PROMPT = B_SYS + system_prompt + E_SYS
         if history:
             instruction = """
-            Context: {history} \n {context}
-            User: {question}"""
+            Contexto: {history} \n {context}
+            Usuario: {question}"""
 
             prompt_template = B_INST + SYSTEM_PROMPT + instruction + E_INST
             prompt = PromptTemplate(input_variables=["history", "context", "question"], template=prompt_template)
         else:
             instruction = """
-            Context: {context}
-            User: {question}"""
+            Contexto: {context}
+            Usuario: {question}"""
 
             prompt_template = B_INST + SYSTEM_PROMPT + instruction + E_INST
             prompt = PromptTemplate(input_variables=["context", "question"], template=prompt_template)
@@ -41,9 +41,9 @@ def get_prompt_template(system_prompt=system_prompt, promptTemplate_type=None, h
                 system_prompt
                 + """
     
-            Context: {history} \n {context}
-            User: {question}
-            Answer:"""
+            Contexto: {history} \n {context}
+            Usuario: {question}
+            Respuesta:"""
             )
             prompt = PromptTemplate(input_variables=["history", "context", "question"], template=prompt_template)
         else:
@@ -51,9 +51,9 @@ def get_prompt_template(system_prompt=system_prompt, promptTemplate_type=None, h
                 system_prompt
                 + """
             
-            Context: {context}
-            User: {question}
-            Answer:"""
+            Contexto: {context}
+            Usuario: {question}
+            Respuesta:"""
             )
             prompt = PromptTemplate(input_variables=["context", "question"], template=prompt_template)
 

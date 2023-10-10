@@ -53,7 +53,7 @@ DOCUMENT_MAP = {
 }
 
 # Default Instructor Model
-EMBEDDING_MODEL_NAME = "hkunlp/instructor-large"  # Uses 1.5 GB of VRAM (High Accuracy with lower VRAM usage)
+# EMBEDDING_MODEL_NAME = "hkunlp/instructor-large"  # Uses 1.5 GB of VRAM (High Accuracy with lower VRAM usage)
 
 ####
 #### OTHER EMBEDDING MODEL OPTIONS
@@ -69,7 +69,7 @@ EMBEDDING_MODEL_NAME = "hkunlp/instructor-large"  # Uses 1.5 GB of VRAM (High Ac
 ####
 
 # EMBEDDING_MODEL_NAME = "intfloat/multilingual-e5-large" # Uses 2.5 GB of VRAM
-# EMBEDDING_MODEL_NAME = "intfloat/multilingual-e5-base" # Uses 1.2 GB of VRAM
+EMBEDDING_MODEL_NAME = "intfloat/multilingual-e5-base" # Uses 1.2 GB of VRAM
 
 
 #### SELECT AN OPEN SOURCE LLM (LARGE LANGUAGE MODEL)
@@ -170,5 +170,6 @@ EMBEDDING_MODEL_NAME = "hkunlp/instructor-large"  # Uses 1.5 GB of VRAM (High Ac
 # MODEL_BASENAME = "wizard-vicuna-13B.ggmlv3.q2_K.bin"
 # MODEL_ID = "TheBloke/orca_mini_3B-GGML"
 # MODEL_BASENAME = "orca-mini-3b.ggmlv3.q4_0.bin"
+
 MODEL_ID = "TheBloke/Llama-2-7B-Chat-GGML"
 MODEL_BASENAME = "llama-2-7b-chat.ggmlv3.q2_K.bin"
