@@ -1,6 +1,5 @@
 # Natural Language Processing
 langchain==0.0.267
-chromadb==0.4.6
 pdfminer.six==20221105
 InstructorEmbedding
 sentence-transformers
@@ -22,10 +21,11 @@ bitsandbytes-windows ; sys_platform == 'win32'
 click
 flask
 requests
-llama-cpp-python==0.1.76
+llama-cpp-python >=0.1.83
 # Streamlit related
 streamlit
 Streamlit-extras
 
 # Excel File Manipulation
 openpyxl
+chromadb==0.4.6
