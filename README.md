@@ -98,6 +98,14 @@ Run as
 
 - `docker run --name localgpt -it --mount src="$HOME/.cache",target=/root/.cache,type=bind --gpus=all localgpt`
 
+If is davidGPT repository of docker, download from here davidvalorwork/davidgpt:latest
+
+- `docker run -p 127.0.0.1:5110:5110 --name davidgpt -it --mount src="$HOME/.cache",target=/root/.cache,type=bind --gpus=all davidvalorwork/davidgpt:v1 python3 run_localGPT_API.py`
+
+For api post:
+
+- `curl -X POST -d "user_prompt=HOLA" http://127.0.0.1:5110/api/prompt_route`
+
 ## Test dataset
 
 For testing, this repository comes with [Constitution of USA](https://constitutioncenter.org/media/files/constitution.pdf) as an example file to use.
