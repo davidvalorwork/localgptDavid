@@ -15,6 +15,7 @@ from prompt_template_utils import get_prompt_template
 # from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
 from langchain.vectorstores import Chroma
 from werkzeug.utils import secure_filename
+from flask_cors import CORS, cross_origin
 
 from constants import CHROMA_SETTINGS, EMBEDDING_MODEL_NAME, PERSIST_DIRECTORY, MODEL_ID, MODEL_BASENAME
 
@@ -69,7 +70,7 @@ QA = RetrievalQA.from_chain_type(
 )
 
 app = Flask(__name__)
-
+CORS(app)
 
 @app.route("/api/delete_source", methods=["GET"])
 def delete_source_route():
@@ -146,6 +147,7 @@ def run_ingest_route():
 
 
 @app.route("/api/prompt_route", methods=["GET", "POST"])
+@cross_origin()
 def prompt_route():
     global QA
     user_prompt = request.form.get("user_prompt")
