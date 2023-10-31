@@ -21,7 +21,6 @@ bitsandbytes-windows ; sys_platform == 'win32'
 click
 flask
 requests
-llama-cpp-python >=0.1.83
 # Streamlit related
 streamlit
 Streamlit-extras
@@ -30,3 +29,4 @@ Streamlit-extras
 openpyxl
 chromadb==0.4.6
 flask-cors
+llama-cpp-python >=0.1.83

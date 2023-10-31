@@ -121,6 +121,7 @@ def main(device_type):
     logging.info(f"Loading documents from {SOURCE_DIRECTORY}")
     documents = load_documents(SOURCE_DIRECTORY)
     text_documents, python_documents = split_documents(documents)
+    # https://dev.to/peterabel/what-chunk-size-and-chunk-overlap-should-you-use-4338
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200)
     python_splitter = RecursiveCharacterTextSplitter.from_language(
         language=Language.PYTHON, chunk_size=880, chunk_overlap=200

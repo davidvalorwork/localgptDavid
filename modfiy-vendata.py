@@ -20,5 +20,5 @@ with open('./SOURCE_DOCUMENTS/vendata.csv', newline='', encoding='utf-8') as csv
                 'Niv.2': row[12],
                 'Niv.3': row[13]
             }
-            json.dump(data, outfile)
+            json.dump(data, outfile, ensure_ascii=False)
             outfile.write('\n')

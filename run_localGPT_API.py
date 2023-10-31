@@ -152,9 +152,11 @@ def prompt_route():
     global QA
     user_prompt = request.form.get("user_prompt")
     if user_prompt:
-        # print(f'User Prompt: {user_prompt}')
+        print(f'User Prompt: {user_prompt}')
         # Get the answer from the chain
         res = QA(user_prompt)
+        print("## QA res:")
+        print(res)
         answer, docs = res["result"], res["source_documents"]
 
         prompt_response_dict = {
